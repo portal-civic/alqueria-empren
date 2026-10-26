@@ -341,6 +341,10 @@ window.RECURSOS = [
     ],
     "enllacos": [
       {
+        "text": "Primer pas: certificat o informe de compatibilitat urbanística",
+        "url": "https://lalqueriadasnar.sedelectronica.es/catalog/t/e247f7c3-b1ff-42ef-8b7d-5195c14e9bbf"
+      },
+      {
         "text": "Botiga, oficina, despatx o taller: declaració responsable o comunicació d'activitat",
         "url": "https://lalqueriadasnar.sedelectronica.es/catalog/t/df2d1685-af1d-454c-90dd-f0d077868573"
       },
@@ -355,6 +359,14 @@ window.RECURSOS = [
       {
         "text": "Establiment públic que requereix llicència",
         "url": "https://lalqueriadasnar.sedelectronica.es/catalog/t/87679048-b42c-47a7-8c33-3d54d162f988"
+      },
+      {
+        "text": "Obres menors per a adequar el local: declaració responsable urbanística",
+        "url": "https://lalqueriadasnar.sedelectronica.es/catalog/t/ef446499-fcee-4092-93ba-ffc7a8d90d1c"
+      },
+      {
+        "text": "Obres de més entitat: llicència urbanística",
+        "url": "https://lalqueriadasnar.sedelectronica.es/catalog/t/15fabacb-83b1-47d1-b435-508245672051"
       },
       {
         "text": "Ordenances municipals",
@@ -1015,8 +1027,8 @@ window.ITINERARI = [
     "text": "Sol·licita-la a l'Ajuntament amb un plànol d'emplaçament i una memòria de l'activitat. Resposta en un mes.",
     "detall": "Presenta a l'Ajuntament una sol·licitud amb el plànol d'emplaçament i una memòria descriptiva de l'activitat. L'informe de compatibilitat urbanística es respon en el termini d'un mes (art. 22 de la Llei 6/2014).",
     "enllac": {
-      "text": "Com es demana",
-      "href": "fitxa.html?id=tramits-activitat"
+      "text": "Sol·licita l'informe",
+      "href": "https://lalqueriadasnar.sedelectronica.es/catalog/t/e247f7c3-b1ff-42ef-8b7d-5195c14e9bbf"
     },
     "fitxes": [
       "tramits-activitat",

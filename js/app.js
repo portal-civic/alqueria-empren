@@ -121,7 +121,7 @@ window.iniciaApp = function () {
       var e = p.enllac || {};
       return '<li class="pas"><span class="pas__num">' + (i + 1) + '</span><div class="pas__targeta">' + ic(p.icona || "circle-check") +
         "<h3>" + (i + 1) + ". " + esc(p.titol) + "</h3><p>" + esc(p.text) + "</p>" +
-        '<a href="' + esc(e.href) + '">' + esc(e.text) + " " + ic("arrow-right") + "</a></div></li>";
+        '<a href="' + esc(e.href) + '"' + (/^https?:/.test(e.href || "") ? ' target="_blank" rel="noopener"' : "") + ">" + esc(e.text) + " " + ic(/^https?:/.test(e.href || "") ? "external-link" : "arrow-right") + "</a></div></li>";
     }).join("");
   }
 
