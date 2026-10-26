@@ -217,7 +217,7 @@ window.iniciaApp = function () {
     // Ortofoto PNOA amb els noms de carrers de l'IGN damunt
     var fonsOrto = L.layerGroup([
       L.tileLayer(IGN, { capa: "pnoa-ma", layer: "OI.OrthoimageCoverage", fmt: "image%2Fjpeg", maxZoom: 19, attribution: atrib + " · PNOA" }),
-      L.tileLayer(IGN, { capa: "ign-base", layer: "IGNBaseOrto", fmt: "image%2Fpng", maxZoom: 19, maxNativeZoom: 17 })
+      L.tileLayer(IGN, { capa: "ign-base", layer: "IGNBaseOrto", fmt: "image%2Fpng", maxZoom: 19 })
     ]);
     var ZOOM_ORTO = 18;   // a partir d'aquest zoom es mostra l'ortofoto
     (mapa.getZoom() >= ZOOM_ORTO ? fonsOrto : fonsMapa).addTo(mapa);
