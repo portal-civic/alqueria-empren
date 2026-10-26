@@ -323,13 +323,13 @@ window.RECURSOS = [
     "resum": "Consulta de compatibilitat urbanística i declaració, comunicació o llicència, segons l'activitat.",
     "queEs": "Per a obrir un establiment cal, primer, saber si l'activitat és compatible amb l'emplaçament i, després, obtindre el títol que corresponga. La Llei valenciana 6/2014 fixa diferents règims segons l'impacte: comunicació d'activitats innòcues, declaració responsable ambiental, llicència ambiental o autorització ambiental integrada.",
     "perAQui": "Qualsevol persona o empresa que obri, trasllade o modifique una activitat en un local o nau.",
-    "acces": "Registre presencial de l'Ajuntament o seu electrònica.",
+    "acces": "Presentació electrònica a la seu de l'Ajuntament (amb certificat digital o Cl@ve) o al registre presencial. Si no saps quin tràmit et correspon, consulta-ho abans a l'Ajuntament.",
     "entitat": "Ajuntament de l'Alqueria d'Asnar",
     "adreca": "C/ de Sant Llorenç, 6",
     "telefon": "965 530 624",
     "correu": "alqueria@lalqueriadasnar.es",
     "web": "https://lalqueriadasnar.sedelectronica.es",
-    "pendent": "Pendent: taxes i model d'obertura",
+    "pendent": "Pendent: taxes",
     "font": "Llei 6/2014, art. 22 [F35]; web municipal, sol·licituds i impresos [F23] i ordenances [F24].",
     "icona": "clipboard-check",
     "foto": "img/ajuntament.jpg",
@@ -341,8 +341,20 @@ window.RECURSOS = [
     ],
     "enllacos": [
       {
-        "text": "Sol·licituds i impresos",
-        "url": "https://www.lalqueriadasnar.es/el-ayuntamiento/solicitudes-e-impresos/"
+        "text": "Botiga, oficina, despatx o taller: declaració responsable o comunicació d'activitat",
+        "url": "https://lalqueriadasnar.sedelectronica.es/catalog/t/df2d1685-af1d-454c-90dd-f0d077868573"
+      },
+      {
+        "text": "Bar, cafeteria o restaurant: declaració responsable d'establiments públics",
+        "url": "https://lalqueriadasnar.sedelectronica.es/catalog/t/36fa4d83-67b8-4671-808c-09185dae1c62"
+      },
+      {
+        "text": "Activitat amb més impacte ambiental: sol·licitud de llicència d'activitat",
+        "url": "https://lalqueriadasnar.sedelectronica.es/catalog/t/bf5e9be9-4ba9-4bbd-86cd-2f915f8b3c78"
+      },
+      {
+        "text": "Establiment públic que requereix llicència",
+        "url": "https://lalqueriadasnar.sedelectronica.es/catalog/t/87679048-b42c-47a7-8c33-3d54d162f988"
       },
       {
         "text": "Ordenances municipals",
