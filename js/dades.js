@@ -754,12 +754,13 @@ window.RECURSOS = [
     "telefon": "965 530 624",
     "correu": "alqueria@lalqueriadasnar.es",
     "pendent": "Pendent: aforament i reserves",
-    "font": "TVA, rehabilitació de l'antiga nau del Bambú [F21].",
+    "font": "TVA, 22/06/2024, rehabilitació de l'antiga nau del Bambú [F21].",
     "icona": "landmark",
     "foto": "img/bambu-porta.jpg",
     "ofereix": [
       "Usos previstos: culturals i formatius",
-      "Rehabilitació parcial contractada el 2023; recuperació presentada el juny de 2024",
+      "Rehabilitació parcial contractada el 2023 i inaugurada l'11 de juny de 2024",
+      "Primer ús: exposició del 30é aniversari de la Colla Dimonis Rafolins",
       "Col·laboració entre l'Ajuntament i Hinojosa Paper"
     ],
     "mapa": false,
