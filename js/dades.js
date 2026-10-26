@@ -17,7 +17,7 @@ window.CONFIG = {
     "adreca": "C/ de Sant Llorenç, 6 · 03829 l'Alqueria d'Asnar",
     "telefon": "965 530 624",
     "correu": "alqueria@lalqueriadasnar.es",
-    "horari": "Dilluns a divendres, de 8.00 a 14.30 h",
+    "horari": "Dilluns a divendres, de 9.00 a 14.00 h",
     "web": "https://www.lalqueriadasnar.es",
     "seu": "https://lalqueriadasnar.sedelectronica.es",
     "privacitat": "https://www.lalqueriadasnar.es/aviso-legal/politica-privacidad/"
@@ -300,10 +300,9 @@ window.RECURSOS = [
     "adreca": "C/ de Sant Llorenç, 6 · 03829 l'Alqueria d'Asnar",
     "telefon": "965 530 624",
     "correu": "alqueria@lalqueriadasnar.es",
-    "horari": "Dilluns a divendres, de 8.00 a 14.30 h",
+    "horari": "Dilluns a divendres, de 9.00 a 14.00 h",
     "web": "https://www.lalqueriadasnar.es",
-    "pendent": "Pendent: confirmar horari",
-    "font": "Registre d'Entitats Locals GVA [F01]; web municipal. Horari pendent de confirmació oficial.",
+    "font": "Registre d'Entitats Locals GVA [F01]; seu electrònica municipal (horari d'atenció al públic, 26/10/2026).",
     "icona": "landmark",
     "foto": "img/ajuntament.jpg",
     "ofereix": [
@@ -321,7 +320,7 @@ window.RECURSOS = [
     "lat": 38.7724,
     "lng": -0.42478,
     "gratuit": true,
-    "validat": false
+    "validat": true
   },
   {
     "id": "tramits-activitat",
