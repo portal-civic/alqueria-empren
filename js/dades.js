@@ -211,7 +211,6 @@ window.SECCIONS = [
         "titol": "Ajudes amb convocatòria",
         "estil": "normal",
         "ids": [
-          "bons-consum-2026",
           "labora",
           "ivace"
         ],
@@ -229,12 +228,14 @@ window.SECCIONS = [
     "grups": [
       {
         "id": "acreditades",
-        "titol": "Necessitat detectada per l'Ajuntament",
+        "titol": "Hostaleria i comerç de proximitat",
         "estil": "foto",
         "ids": [
           "op-proximitat",
-          "bar-la-llar"
-        ]
+          "bar-la-llar",
+          "bons-consum-2026"
+        ],
+        "text": "Necessitat detectada per l'Ajuntament i suport municipal al comerç local."
       },
       {
         "id": "sectors",
@@ -437,12 +438,13 @@ window.RECURSOS = [
   },
   {
     "id": "bons-consum-2026",
-    "categoria": "municipal",
-    "nom": "Bons de consum local 2026",
-    "resum": "1.500 bons de 20 € per a comprar al comerç local. Es poden descarregar fins al 30 de desembre de 2026 o fins que s'esgoten.",
-    "queEs": "Campanya «Bono-Consum L'Alqueria d'Asnar 2026», de 30.009 €, finançada íntegrament per la Diputació d'Alacant. Les persones empadronades descarreguen bons de descompte i els gasten en els comerços adherits, que cobren el descompte de l'Ajuntament.",
-    "perAQui": "Comerços i empreses amb establiment obert al públic a l'Alqueria d'Asnar (per a adherir-se) i persones majors de 18 anys empadronades al municipi (per a usar els bons).",
-    "acces": "Persones: registre a bonos.lalqueriadasnar.es. Comerços: sol·licitud d'adhesió a la seu electrònica. L'Ajuntament publicarà la llista de comerços adherits.",
+    "categoria": "oportunitat",
+    "nom": "Campanya de consum local (Bono-Consum 2026)",
+    "resum": "L'Ajuntament impulsa el comerç local amb una campanya de bons de descompte per als veïns. Els comerços del poble s'hi poden adherir a cada edició.",
+    "estat": "Campanya 2026 en curs, fins al 30 de desembre",
+    "queEs": "Campanya «Bono-Consum L'Alqueria d'Asnar 2026», de 30.009 €, finançada íntegrament per la Diputació d'Alacant. Les persones empadronades descarreguen bons de descompte i els gasten en els comerços adherits, que cobren el descompte de l'Ajuntament. És una mostra del suport municipal al comerç de proximitat: els comerços que obrin al municipi podran adherir-se a les properes edicions.",
+    "perAQui": "Comerços i establiments oberts al públic al municipi, que s'hi poden adherir, i persones majors de 18 anys empadronades, que usen els bons.",
+    "acces": "Comerços: l'adhesió s'obri a cada edició durant 10 dies hàbils des de la publicació de la convocatòria al BOP, per la seu electrònica. Persones: registre a bonos.lalqueriadasnar.es.",
     "entitat": "Ajuntament de l'Alqueria d'Asnar",
     "telefon": "965 530 624",
     "correu": "alqueria@lalqueriadasnar.es",
@@ -460,7 +462,7 @@ window.RECURSOS = [
       "Exclosos: estancs, supermercats de 400 m² o més, gasolineres i venda de vehicles, venda ambulant i en línia, joc i apostes, i medicaments de preu regulat"
     ],
     "mapa": false,
-    "gratuit": true,
+    "gratuit": false,
     "validat": false
   },
   {
@@ -1091,8 +1093,7 @@ window.ITINERARI = [
     },
     "fitxes": [
       "labora",
-      "ivace",
-      "bons-consum-2026"
+      "ivace"
     ]
   }
 ];
