@@ -436,18 +436,17 @@ window.RECURSOS = [
     "entitat": "Mancomunitat de l'Alcoià i el Comtat · CEEI Alcoi",
     "adreca": "AODL de Cocentaina · C/ Sant Cristòfor, 8 · Cocentaina",
     "web": "https://desarrollolocal.emprenemjunts.es/?lang=2&n=13103&op=8",
-    "pendent": "Pendent: confirmar calendari",
-    "font": "Convocatòria Agència Impuls 2026, EmprenemJunts [F29].",
+    "font": "Agenda 2026 de l'Agència Impuls, EmprenemJunts [F29]. Consulta: 26/10/2026.",
     "icona": "headset",
     "ofereix": [
       "Consultes individuals gratuïtes d'una hora, aproximadament",
       "Model de negoci, màrqueting i gestió econòmica i financera",
       "Cerca d'ajudes i posada en marxa",
-      "Sessions a Cocentaina en 2026: 5 de novembre i 9 de desembre (9.30–14 h)"
+      "Pròximes sessions a Cocentaina: dijous 5 de novembre i dimecres 9 de desembre de 2026, de 9.30 a 14 h"
     ],
     "mapa": false,
     "gratuit": true,
-    "validat": false
+    "validat": true
   },
   {
     "id": "labora",
