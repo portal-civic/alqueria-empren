@@ -311,6 +311,12 @@ window.RECURSOS = [
       "Derivació a l'Agència Impuls (assessorament comarcal gratuït)",
       "Recepció d'ofertes de locals i naus per part dels propietaris"
     ],
+    "enllacos": [
+      {
+        "text": "Instància general (seu electrònica)",
+        "url": "https://lalqueriadasnar.sedelectronica.es/catalog/t/5161fa8d-970e-4b48-a506-b2ac34ceafe5"
+      }
+    ],
     "lat": 38.7724,
     "lng": -0.42478,
     "gratuit": true,
@@ -396,6 +402,12 @@ window.RECURSOS = [
       "Tauler d'anuncis: convocatòries i bases municipals",
       "Consulta d'expedients"
     ],
+    "enllacos": [
+      {
+        "text": "Instància general (seu electrònica)",
+        "url": "https://lalqueriadasnar.sedelectronica.es/catalog/t/5161fa8d-970e-4b48-a506-b2ac34ceafe5"
+      }
+    ],
     "mapa": false,
     "gratuit": true,
     "validat": true
@@ -427,23 +439,25 @@ window.RECURSOS = [
     "id": "bons-consum-2026",
     "categoria": "municipal",
     "nom": "Bons de consum local 2026",
-    "resum": "Campanya municipal de 30.009 € per a impulsar la compra en el comerç local. Bons vàlids fins al 30 de desembre.",
-    "queEs": "Campanya de l'Ajuntament per a fomentar el consum en els establiments del municipi (convocatòria BDNS 933629).",
-    "perAQui": "Comerços i establiments que complisquen les condicions de les bases, i veïnat.",
-    "acces": "Al web de la campanya o a l'Ajuntament.",
+    "resum": "1.500 bons de 20 € per a comprar al comerç local. Es poden descarregar fins al 30 de desembre de 2026 o fins que s'esgoten.",
+    "queEs": "Campanya «Bono-Consum L'Alqueria d'Asnar 2026», de 30.009 €, finançada íntegrament per la Diputació d'Alacant. Les persones empadronades descarreguen bons de descompte i els gasten en els comerços adherits, que cobren el descompte de l'Ajuntament.",
+    "perAQui": "Comerços i empreses amb establiment obert al públic a l'Alqueria d'Asnar (per a adherir-se) i persones majors de 18 anys empadronades al municipi (per a usar els bons).",
+    "acces": "Persones: registre a bonos.lalqueriadasnar.es. Comerços: sol·licitud d'adhesió a la seu electrònica. L'Ajuntament publicarà la llista de comerços adherits.",
     "entitat": "Ajuntament de l'Alqueria d'Asnar",
     "telefon": "965 530 624",
     "correu": "alqueria@lalqueriadasnar.es",
     "web": "https://bonos.lalqueriadasnar.es",
-    "pendent": "Pendent: data de publicació al BOP",
-    "font": "Tauler de la seu electrònica, setembre i octubre de 2026 [F16]; BDNS 933629.",
+    "pendent": "Pendent: data del BOP i comerços adherits",
+    "font": "Bases reguladores del Bono-Consum L'Alqueria d'Asnar 2026 (Ajuntament); Convocatòria Bono-Consum 2026 de la Diputació d'Alacant, BOP núm. 137, 23/07/2026; BDNS 933629.",
     "icona": "store",
     "foto": "img/comerc.jpg",
     "ofereix": [
-      "Import aprovat: 30.009 €",
-      "Adhesió de comerços: 10 dies hàbils des de la publicació al BOP",
-      "Ús dels bons: del 15 d'octubre al 30 de desembre de 2026, o fins a esgotar-los",
-      "Convocatòria a la Base de Dades Nacional de Subvencions: BDNS 933629"
+      "1.500 bons de 20 €; màxim 3 per persona en la primera fase",
+      "Compra mínima: 40 € amb 1 bo, 80 € amb 2 i 120 € amb 3",
+      "Fase 1: del 15 d'octubre a l'1 de desembre de 2026. Fase 2: del 2 al 30 de desembre, amb 3 bons més per persona si en queden",
+      "Descàrrega a bonos.lalqueriadasnar.es o presencialment a l'Ajuntament (dimarts i dijous, de 10 a 14 h) per a majors de 65 anys o persones amb dificultats digitals",
+      "Comerços: adhesió en 10 dies hàbils des de la publicació al BOP, per la seu electrònica (Annex I). Cal establiment permanent al municipi i estar al corrent amb l'AEAT, la Seguretat Social i l'Ajuntament",
+      "Exclosos: estancs, supermercats de 400 m² o més, gasolineres i venda de vehicles, venda ambulant i en línia, joc i apostes, i medicaments de preu regulat"
     ],
     "mapa": false,
     "gratuit": true,
@@ -809,13 +823,23 @@ window.RECURSOS = [
     "icona": "coffee",
     "foto": "img/bar-la-llar.jpg",
     "situacio": [
-      "Al setembre de 2026 l'Ajuntament va convocar un procediment públic per a adjudicar-ne l'explotació",
+      "El 2 de setembre de 2026 l'Ajuntament va publicar la licitació (expedient 201/2026, procediment obert simplificat)",
       "La licitació va quedar deserta el 30 de setembre de 2026, després de la renúncia de l'única candidatura",
       "L'Ajuntament ha acordat iniciar un nou procediment. A 22 d'octubre de 2026 encara no s'ha publicat la nova convocatòria"
     ],
     "ofereix": [
       "Condicions de la licitació anterior (poden canviar): contracte de tres anys prorrogable un any, cànon mínim anual de 5.161,32 € (IVA inclòs) i reducció del 50% les tres primeres mensualitats",
       "Equipament del local: 16 taules, 41 cadires, televisió, dos equips d'aire condicionat, dos frigorífics, campana extractora, extintor i desfibril·lador"
+    ],
+    "enllacos": [
+      {
+        "text": "Expedient 201/2026: anunci de licitació",
+        "url": "https://lalqueriadasnar.sedelectronica.es/?x=5nFB24BdL5Gg9wu3wwOF3J8lE7g936IEQ*Z18pxFC1KokMiik4C9YqBhfCIecFx2obSJwOMbVNAZNmLdBUj73A"
+      },
+      {
+        "text": "Plec de clàusules econòmiques i administratives",
+        "url": "https://lalqueriadasnar.sedelectronica.es/?x=5nFB24BdL5Gg9wu3wwOF3J8lE7g936IEqRBPcsJ4QXvhIRbnyEo157wsEAXRMD-BdeWAvr3idgFo2uFd9K5r4A"
+      }
     ],
     "lat": 38.77234,
     "lng": -0.42549,
@@ -829,7 +853,7 @@ window.RECURSOS = [
     "resum": "Propietaris: comuniqueu-ho a l'Ajuntament i el donarem a conéixer, amb la vostra autorització.",
     "queEs": "L'eina publicarà locals, naus i solars privats només quan el titular ho autoritze per escrit i l'Ajuntament n'haja comprovat les dades.",
     "perAQui": "Propietaris de locals, naus o solars al municipi.",
-    "acces": "Tria «Oferir un local o espai» al formulari de contacte.",
+    "acces": "Comunica-ho amb el formulari de contacte (opció «Oferir un local o espai») o presenta una instància general a l'Ajuntament.",
     "entitat": "Ajuntament de l'Alqueria d'Asnar",
     "font": "Criteri de publicació de l'eina.",
     "icona": "key-round",
@@ -837,6 +861,12 @@ window.RECURSOS = [
       "Publicació amb autorització expressa del titular",
       "Dades mínimes: adreça, superfície, preu i règim (lloguer, venda o cessió)",
       "Comprovació municipal de la compatibilitat d'usos abans de publicar"
+    ],
+    "enllacos": [
+      {
+        "text": "Instància general (seu electrònica)",
+        "url": "https://lalqueriadasnar.sedelectronica.es/catalog/t/5161fa8d-970e-4b48-a506-b2ac34ceafe5"
+      }
     ],
     "mapa": false,
     "gratuit": true,
