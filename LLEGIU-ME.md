@@ -49,6 +49,8 @@ Pujar la imatge a la carpeta `img/` i escriure'n la ruta a la columna «Foto» d
 | `css/estils.css` | Estils, amb la tipografia Nunito Sans incrustada (llicència OFL, a `fonts/`) |
 | `img/` | Escut, logo de la Diputació i fotografies |
 | `vendor/leaflet/` | Llibreria del mapa (Leaflet 1.9.4, BSD-2) |
+| `vendor/markercluster/` | Agrupació de marcadors (Leaflet.markercluster 1.5.3, MIT) |
+| `vendor/maplibre/` | Mapes vectorials (MapLibre GL 4.7.1, BSD-3, i maplibre-gl-leaflet 0.1.3) |
 | `vendor/sheetjs/` | Llibreria per a llegir Excel (SheetJS 0.18.5, Apache 2.0) |
 
 ## Com publicar
@@ -72,6 +74,12 @@ No envia dades a cap servidor: prepara un correu adreçat a l'adreça de la pest
 
 ## Mapa
 
-Cartografia oficial de l'Instituto Geográfico Nacional (`www.ign.es/wmts`): mapa base fins al zoom 17 i ortofoto PNOA amb noms de carrers a partir del 18 (llicència CC BY 4.0). Si fallara, la pàgina canvia sola a OpenStreetMap. No s'usen Google Fonts ni cap servei de seguiment.
+Selector de tres capes, totes gratuïtes i sense clau:
+
+- **Mapa clar** (per defecte): OpenFreeMap, estil «Liberty» (mapa vectorial amb dades d'OpenStreetMap).
+- **Mapa viu**: OpenFreeMap, estil «Bright».
+- **Vista aèria**: ortofoto PNOA de l'Instituto Geográfico Nacional amb els noms de carrers de l'IGN (CC BY 4.0).
+
+Els marcadors pròxims s'agrupen en cercles amb un número (Leaflet.markercluster) i se separen en apropar el zoom. Si el navegador no pot dibuixar mapes vectorials (sense WebGL), el mapa s'obri amb la vista aèria. No s'usen Google Fonts ni cap servei de seguiment.
 
 Nota: la capçalera, el menú i el peu són idèntics a totes les pàgines HTML. Si es canvia el menú, cal canviar-lo a totes.

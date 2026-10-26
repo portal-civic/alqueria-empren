@@ -172,7 +172,7 @@ window.iniciaApp = function () {
   var actius = {};
   var catInicial = param("cat");
   Object.keys(CAT).forEach(function (k) { actius[k] = !CAT[catInicial] || k === catInicial; });
-  var marcadors = {}, empresesMapa = [], mapa = null;
+  var marcadors = {}, empresesMapa = [], mapa = null, grupMapa = null;
 
   function pintarFiltres() {
     var f = $("#filtres"); if (!f) return;
@@ -206,43 +206,51 @@ window.iniciaApp = function () {
     c.hidden = !html;
   }
 
+  // Capes del selector: «Mapa clar» i «Mapa viu» (OpenFreeMap, vectorials) i
+  // «Vista aèria» (ortofoto PNOA de l'IGN amb els noms de carrers).
+  function capesBase() {
+    var IGN = "https://www.ign.es/wmts/{capa}?layer={layer}&style=default&tilematrixset=GoogleMapsCompatible" +
+      "&Service=WMTS&Request=GetTile&Version=1.0.0&Format={fmt}&TileMatrix={z}&TileCol={x}&TileRow={y}";
+    var atribIGN = 'PNOA CC BY 4.0 <a href="https://www.scne.es" target="_blank" rel="noopener">scne.es</a> · Instituto Geográfico Nacional';
+    var atribOFM = '<a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> &copy; <a href="https://www.openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
+      'Dades de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>';
+    var capes = {}, perDefecte = null;
+
+    var webgl = false;
+    try { var cv = document.createElement("canvas"); webgl = !!(cv.getContext("webgl") || cv.getContext("experimental-webgl")); } catch (e) {}
+    if (L.maplibreGL && webgl) {
+      capes["Mapa clar"] = perDefecte = L.maplibreGL({ style: "https://tiles.openfreemap.org/styles/liberty", attribution: atribOFM });
+      capes["Mapa viu"] = L.maplibreGL({ style: "https://tiles.openfreemap.org/styles/bright", attribution: atribOFM });
+    }
+    capes["Vista aèria"] = L.layerGroup([
+      L.tileLayer(IGN, { capa: "pnoa-ma", layer: "OI.OrthoimageCoverage", fmt: "image%2Fjpeg", maxZoom: 19, attribution: atribIGN }),
+      L.tileLayer(IGN, { capa: "ign-base", layer: "IGNBaseOrto", fmt: "image%2Fpng", maxZoom: 19 })
+    ]);
+    if (!perDefecte) perDefecte = capes["Vista aèria"];   // sense mapes vectorials, s'obri la vista aèria
+    return { capes: capes, perDefecte: perDefecte };
+  }
+
   function iniciarMapa() {
     if (!$("#mapa")) return;
     if (!window.L) { $(".mapa-caixa").hidden = true; return; }
-    mapa = L.map("mapa", { scrollWheelZoom: false }).setView([C.mapa.lat, C.mapa.lng], C.mapa.zoom);
-    var IGN = "https://www.ign.es/wmts/{capa}?layer={layer}&style=default&tilematrixset=GoogleMapsCompatible" +
-      "&Service=WMTS&Request=GetTile&Version=1.0.0&Format={fmt}&TileMatrix={z}&TileCol={x}&TileRow={y}";
-    var atrib = 'CC BY 4.0 <a href="https://www.scne.es" target="_blank" rel="noopener">scne.es</a> · Instituto Geográfico Nacional';
-    var fonsMapa = L.tileLayer(IGN, { capa: "ign-base", layer: "IGNBaseTodo", fmt: "image%2Fjpeg", maxZoom: 19, maxNativeZoom: 17, attribution: atrib });
-    // Ortofoto PNOA amb els noms de carrers de l'IGN damunt
-    var fonsOrto = L.layerGroup([
-      L.tileLayer(IGN, { capa: "pnoa-ma", layer: "OI.OrthoimageCoverage", fmt: "image%2Fjpeg", maxZoom: 19, attribution: atrib + " · PNOA" }),
-      L.tileLayer(IGN, { capa: "ign-base", layer: "IGNBaseOrto", fmt: "image%2Fpng", maxZoom: 19 })
-    ]);
-    var ZOOM_ORTO = 18;   // a partir d'aquest zoom es mostra l'ortofoto
-    (mapa.getZoom() >= ZOOM_ORTO ? fonsOrto : fonsMapa).addTo(mapa);
-    L.control.layers({ "Mapa": fonsMapa, "Ortofoto": fonsOrto }, null, { position: "topright" }).addTo(mapa);
-
-    // Canvi automàtic de capa segons el zoom, mentre l'usuari no en trie una a mà
-    var triaManual = false, canviAuto = false;
-    mapa.on("baselayerchange", function () { if (!canviAuto) triaManual = true; });
-    mapa.on("zoomend", function () {
-      if (triaManual) return;
-      var volOrto = mapa.getZoom() >= ZOOM_ORTO;
-      var ara = mapa.hasLayer(fonsOrto);
-      if (volOrto === ara) return;
-      canviAuto = true;
-      if (volOrto) { mapa.removeLayer(fonsMapa); fonsOrto.addTo(mapa); }
-      else { mapa.removeLayer(fonsOrto); fonsMapa.addTo(mapa); }
-      canviAuto = false;
-    });
+    var base = capesBase();
+    mapa = L.map("mapa", { scrollWheelZoom: false, maxZoom: 19, layers: [base.perDefecte] })
+      .setView([C.mapa.lat, C.mapa.lng], C.mapa.zoom);
+    L.control.layers(base.capes, null, { position: "topright", collapsed: true }).addTo(mapa);
     L.control.scale({ imperial: false }).addTo(mapa);
-    var errors = 0, canviat = false;
-    fonsMapa.on("tileerror", function () {
-      if (canviat || ++errors < 4) return;
-      canviat = true; mapa.removeLayer(fonsMapa);
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(mapa);
-    });
+
+    // Agrupació de marcadors pròxims (Leaflet.markercluster)
+    grupMapa = L.markerClusterGroup ? L.markerClusterGroup({
+      maxClusterRadius: 40,
+      disableClusteringAtZoom: 18,
+      spiderfyOnMaxZoom: true,
+      showCoverageOnHover: false,
+      iconCreateFunction: function (cl) {
+        return L.divIcon({ className: "", iconSize: [44, 44], html: '<div class="grup-punts"><span>' + cl.getChildCount() + "</span></div>" });
+      }
+    }) : L.layerGroup();
+    mapa.addLayer(grupMapa);
+
     R.filter(alMapa).forEach(function (r) {
       var c = CAT[r.categoria];
       var icona = L.divIcon({ className: "", iconSize: [40, 40], iconAnchor: [20, 42], popupAnchor: [0, -40],
@@ -257,8 +265,9 @@ window.iniciaApp = function () {
       (r.empreses || []).forEach(function (e) {
         if (typeof e.lat !== "number" || typeof e.lng !== "number") return;
         var c = CAT[r.categoria];
-        var m = L.circleMarker([e.lat, e.lng], { radius: 8, color: "#fff", weight: 3, fillColor: c.color, fillOpacity: 1 });
-        m.bindTooltip(esc(e.nom), { direction: "top", offset: [0, -6] });
+        var m = L.marker([e.lat, e.lng], { title: e.nom, keyboard: true,
+          icon: L.divIcon({ className: "", iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, -10], html: '<span class="punt-empresa" style="--c:' + c.color + '"></span>' }) });
+        m.bindTooltip(esc(e.nom), { direction: "top", offset: [0, -10] });
         m.bindPopup('<div class="popup popup--empresa"><div><span class="popup__eti">Empresa · ' + esc(r.nom) + "</span><h3>" + esc(e.nom) + "</h3><p>" + esc(e.activitat) + '</p><a class="boto boto--mari" href="' + urlFitxa(r.id) + '">Veure l\'àrea</a></div></div>', { maxWidth: 300 });
         empresesMapa.push({ m: m, cat: r.categoria });
       });
@@ -289,11 +298,11 @@ window.iniciaApp = function () {
   }
 
   function actualitzar() {
-    if (mapa) Object.keys(marcadors).forEach(function (id) {
-      var m = marcadors[id];
-      if (actius[perId(id).categoria]) m.addTo(mapa); else m.remove();
-    });
-    if (mapa) empresesMapa.forEach(function (x) { if (actius[x.cat]) x.m.addTo(mapa); else x.m.remove(); });
+    if (grupMapa) {
+      var mostra = function (m, si) { if (si && !grupMapa.hasLayer(m)) grupMapa.addLayer(m); else if (!si && grupMapa.hasLayer(m)) grupMapa.removeLayer(m); };
+      Object.keys(marcadors).forEach(function (id) { mostra(marcadors[id], actius[perId(id).categoria]); });
+      empresesMapa.forEach(function (x) { mostra(x.m, actius[x.cat]); });
+    }
     pintarComptadors();
     var d = $("#directori-grups");
     if (d) {
