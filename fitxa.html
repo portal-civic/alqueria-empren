@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fitxa · Emprén a l'Alqueria d'Asnar</title>
+<meta name="description" content="Fitxa de recurs de l'eina municipal d'acollida emprenedora de l'Alqueria d'Asnar.">
+<meta name="robots" content="noindex, nofollow">   <!-- FASE DE REVISIÓ: llevar en publicar definitivament -->
+<link rel="icon" href="img/escut.png">
+<link rel="stylesheet" href="css/estils.css">
+</head>
+<body data-pagina="fitxa">
+<script src="js/icones.js"></script>
+
+<a class="salt" href="#contingut">Vés al contingut</a>
+<div class="avis-revisio" id="avis-revisio" hidden>
+  <div class="amplada">Versió de revisió · Els elements amb una <span class="etiqueta-pendent">etiqueta groga</span> s'han de confirmar abans de publicar.</div>
+</div>
+
+<header class="capcalera">
+  <div class="amplada capcalera__fila">
+    <a class="marca" href="index.html" aria-label="Inici · Emprén a l'Alqueria d'Asnar">
+      <img src="img/escut.png" alt="" width="46" height="61">
+      <span><small>Ajuntament de</small>l'Alqueria d'Asnar</span>
+    </a>
+    <button class="menu-boto" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menú"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="index.html" data-menu="inici">Inici</a>
+      <a href="comencar.html" data-menu="comencar">Començar</a>
+      <a href="espais.html" data-menu="espais">Espais</a>
+      <a href="suport.html" data-menu="suport">Suport i ajudes</a>
+      <a href="oportunitats.html" data-menu="oportunitats">Oportunitats</a>
+      <a href="mapa.html" data-menu="mapa">Mapa</a>
+      <a class="menu__contacte" href="index.html#contacte" data-menu="contacte"><svg class="ic" aria-hidden="true"><use href="#i-message-circle-more"/></svg>Contacte</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contingut" class="fitxa-pagina">
+  <div class="amplada">
+    <nav class="molles" aria-label="Ruta" id="molles"><a href="index.html">Inici</a></nav>
+    <div id="fitxa-pagina"></div>
+    <section class="relacionades" id="relacionades" hidden>
+      <h2>Altres recursos relacionats</h2>
+      <div class="llistat" id="relacionades-llistat"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="peu">
+  <div class="amplada peu__fila">
+    <div class="peu__marca">
+      <img src="img/escut.png" alt="">
+      <div><strong>Ajuntament de l'Alqueria d'Asnar</strong><p>Informació actualitzada el <span class="data-act"></span></p></div>
+    </div>
+    <nav class="peu__menu" aria-label="Peu">
+      <a href="index.html">Inici</a><a href="comencar.html">Començar</a><a href="espais.html">Espais</a><a href="suport.html">Suport i ajudes</a><a href="oportunitats.html">Oportunitats</a><a href="mapa.html">Mapa</a><a href="index.html#contacte">Contacte</a>
+    </nav>
+    <div class="peu__subv">
+      <img src="img/diputacio.png" alt="Diputació d'Alacant" width="106" height="120">
+      <p>Actuació subvencionada per la Diputació Provincial d'Alacant · Desenvolupament Econòmic i Sectors Productius 2026</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/dades.js"></script>
+<script src="vendor/sheetjs/xlsx.mini.min.js"></script>
+<script src="js/llibre.js"></script>
+<script src="js/app.js"></script>
+<script src="js/carrega.js"></script>
+</body>
+</html>
