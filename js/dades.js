@@ -20,7 +20,7 @@ window.CONFIG = {
     "horari": "Dilluns a divendres, de 8.00 a 14.30 h",
     "web": "https://www.lalqueriadasnar.es",
     "seu": "https://lalqueriadasnar.sedelectronica.es",
-    "privacitat": ""
+    "privacitat": "https://www.lalqueriadasnar.es/aviso-legal/politica-privacidad/"
   },
   "xifres": [
     {
@@ -623,7 +623,7 @@ window.RECURSOS = [
       },
       {
         "nom": "Naturpunt, SL",
-        "activitat": "Activitat per confirmar"
+        "activitat": ""
       }
     ]
   },
